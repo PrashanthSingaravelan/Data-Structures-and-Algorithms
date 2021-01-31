@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1581691052 source:f:\additional learning\data structures and algorithms\linked list\bfs\main.c
+	<stdio.h>
+	<stdlib.h>
+
+1581689977 source:f:\additional learning\data structures and algorithms\graphs\bfs and dfs\queue.c
+	<stdlib.h>
+
