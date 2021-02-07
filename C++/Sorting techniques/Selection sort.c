@@ -20,7 +20,7 @@ void Swap(int *x,int *y)
 
 void Selection_sort(int A[],int n)
 {
-	int i,j,k;
+	int i,j,k;	
 	for(i=0;i<n-1;i++)  // for passes 
 	{
 		for(j=k=i;j<n;j++)
