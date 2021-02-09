@@ -3,54 +3,54 @@
 
 struct Stack
 {
-    int size;
-    int top;
-    int *S;
+    int size;   // size of the stack 
+    int top;    // top pointer 
+    int *S;     // array 
 };
 
 void Create(struct Stack *ptr)
 {
     printf("Enter the size of your stack elements : ");
     scanf("%d",&ptr->size);
-    ptr->top=-1;
-    ptr->S=(int*)malloc( (ptr->size)*sizeof(int) );
-}
-
-void Display(struct Stack ptr)
-{
-    int i;
-    for(i=ptr.top;i>=0;i--)
-    {
-        printf("%d",ptr.S[i]);
-        printf("\n");
-    }
+    ptr->top = -1;   // Initially top will be -1
+    ptr->S   = (int*)malloc( (ptr->size)*sizeof(int) );  // dynamic array depending upon the user-input
 }
 
 void Push(struct Stack *ptr,int x)
-     {
-        if(ptr->top==ptr->size-1) printf("Stack Overflow\n");
-        else
-        {
-            ptr->top++;
-            ptr->S[ptr->top]=x;
-        }
-     }
+{
+    if(ptr->top == ptr->size-1) printf("Stack Overflow\n"); 
+    else
+    {
+        ptr->top++;             // incrementing the top pointer
+        ptr->S[ptr->top] = x;   // putting the elements into the stack
+    }
+}
 
 int Pop(struct Stack *ptr)
 {
     int x=-1;
-    if(ptr->top==-1) {printf("Stack Underflow");}
+    if(ptr->top==-1) printf("Stack Underflow"); // stack has no elements to pop it out
     else
     {
-        x=ptr->S[ptr->top];
-        ptr->top--;
+        x = ptr->S[ptr->top];  // getting the top element from the array
+        ptr->top--;    // decrementing the top pointer
     }
 return x;
 }
 
+void Display(struct Stack ptr)   
+{
+    int i;
+    for(i=ptr.top;i>=0;i--)
+    {
+        printf("%d  ",ptr.S[i]);
+    }
+    printf("\n");
+}
+
 int Peek(struct Stack ptr,int pos)
 {
-    int x=-1;  // To carry the popped element
+    int x = -1;  // To carry the popped element
     if(ptr.top-pos+1 < 0) printf("Invalid Index");
     else
     {
@@ -59,20 +59,23 @@ int Peek(struct Stack ptr,int pos)
     return x;
 }
 
-
-
 int main()
 {
     struct Stack obj1;
+    int element;
+
     Create(&obj1);
 
-    Push(&obj1,10);
-    Push(&obj1,20);  //   Stack        latest => 40 => First added
-    Push(&obj1,30); //   40,30,20,10   Old    => 10 => Last added
-    Push(&obj1,40); //
+    printf("Enter the stack elements : ");
 
-    printf("Element at 3rd : %d\n",Peek(obj1,3));
+    for(int i=0;i<obj1.size;i++)
+    {
+        scanf("%d",&element);
+        Push(&obj1,element);
+    }
 
-    printf("The Rest of the elements : \n");
+    // printf("Element at 3rd : %d\n",Peek(obj1,3));
+
+    printf("Stack elements starting from the top pointer : ");
     Display(obj1);
 }
