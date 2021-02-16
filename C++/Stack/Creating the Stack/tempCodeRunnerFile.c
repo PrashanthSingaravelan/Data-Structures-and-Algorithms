@@ -1,0 +1,1 @@
+(int*)malloc( (ptr->size)*sizeof(int) );  // dynamic array depending upon the user-input
