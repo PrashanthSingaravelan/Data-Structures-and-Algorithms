@@ -2,8 +2,7 @@
 #include<conio.h>
 #include<limits.h>
 
-void Display(int A[],int n)
-{
+void Display(int A[],int n) {
 	int i;
 	for(i=0;i<n-1;i++)  // n-1 to avoid printing infinity
 		{
@@ -12,33 +11,31 @@ void Display(int A[],int n)
 	printf("\n");
 }
 
-void Swap(int *x,int *y)
-{
+void Swap(int *x,int *y) {
 	int temp = *x;
 	*x = *y;
 	*y = temp;
 }
 
-int partition(int A[],int low,int high)
-{
+int Partition(int A[],int low,int high) {
 	int pivot = A[low];
 	int i = low;
 	int j = high;
 
 	do
 	{
-		do{   // if i<=pivot(move) , if i>pivot(stops)
+		do{  // if i<=pivot(move) , if i>pivot(stops)
 			i++;
-		  }while(A[i]<=pivot);  
+		}while(A[i]<=pivot);  
 
-		 do{ // if j>pivot(move) , if j<=pivot(stops)
+		do{ // if j>pivot(move) , if j<=pivot(stops)
 			j--;
-			}while(A[j]>pivot); 
+		}while(A[j]>pivot); 
 
-		 if(j>i)
-		 {
+		if(j>i) {
 		 	Swap(&A[i],&A[j]);
-		 }
+		}
+
 	}while(j>i);
 
 	Swap(&A[low],&A[j]);   // when j>i Swap(pivot(i.e low,j) , swap(50,40)
@@ -50,7 +47,7 @@ void Quick_Sort(int A[],int low,int high)
 	int j;
 	if(low<high)
 	{
-		j = partition(A,low,high);
+		j = Partition(A,low,high);
 		
 		// Quick sort to the list that is Smaller than 50 [low(40),high(50)]
 		Quick_Sort(A,low,j);    

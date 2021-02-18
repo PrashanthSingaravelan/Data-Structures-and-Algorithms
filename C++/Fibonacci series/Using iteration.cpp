@@ -1,5 +1,6 @@
 #include<iostream>
 using namespace std;
+
 int fib(int n)     // Time complexity=O(n)
 {
 int sum=0,t0=0,t1=1;
@@ -12,7 +13,8 @@ int sum=0,t0=0,t1=1;
 			t1=sum;			
 		}
 	return sum;	
- } 
+} 
+
 int main()
 {
 	int a,b;

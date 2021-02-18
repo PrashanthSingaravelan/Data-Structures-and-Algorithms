@@ -13,10 +13,9 @@ void Display(int A[],int n)
 
 void Merge(int A[],int low,int middle,int high)
 {
-	int i,j,k;
-	i=low;
-	j=middle+1;
-	k=low;
+	int	i = low;
+	int j = middle+1;
+	int k = low;
 	int B[100];//int B[high+1];
 
 	// Comparing the elements and putting into the 2nd array
@@ -59,7 +58,7 @@ void Merge_Sort(int A[],int n)
 		Display(A,n);
 	}
 	
-	if(p/2<n)
+	if(p/2<n)  /*Odd number of elements in the list (or) list is not in the powers of 2*/
 	{
 	    Merge(A,0,(p/2)-1,n);
 	}
