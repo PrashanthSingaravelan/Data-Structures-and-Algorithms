@@ -1,8 +1,7 @@
 #include<stdio.h>
 #include<conio.h>
 
-void DFS(int G[][7],int u,int n)
-{
+void DFS(int G[][7],int u,int n) {
 	static int visited[7] = {0};
 	
 	if(visited[u]==0) {
@@ -18,8 +17,7 @@ void DFS(int G[][7],int u,int n)
 	}
 }
 
-int main()
-{
+int main() {
 int A[7][7]={
 		{0,0,0,0,0,0,0},
 		{0,0,1,1,0,0,0},

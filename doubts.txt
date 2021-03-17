@@ -1,0 +1,4 @@
+1) Dynamic programming 
+2) Optimum solution
+3) Greedy method
+4) Decision problem
