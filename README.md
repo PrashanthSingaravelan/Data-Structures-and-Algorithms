@@ -1,21 +1,25 @@
 # Data-Structures-and-Algorithms
 From scratch to advanced data structures topics including algorithms and codes
 
-# Time Complexity Analysis
+# Array's and ADT
 
-# Dynamic Programming
+# Linked List
 
-## Queue
+# Queue
 
-## Stack
+# Stack
 
 # Searching Techniques
 
 # Sorting Techniques
 
-## Trees
+# Trees
 ### Binary Trees
 
 ### Binary Search Trees
 
-## Graphs
+# Graphs
+
+# Time Complexity Analysis
+
+# Dynamic Programming
